@@ -11,14 +11,12 @@
 
         <div class="col-md-6">
             <h2>Want to eat the burger?</h2>
+            <br>
             <ul>
                 {{#each burgers}}
                 {{#unless devoured}}
-                <p>{{id}}. {{burger_name}}
-                    <span><button class="change-devour" data-id="{{id}}" data-newdevour=true>
-                            {{#if devoured}}devoured!{{else}}devour me!{{/if}}
-                        </button></span>
-                </p>
+                {{> burgers/burger-block devour=true}}
+                <hr>
                 {{/unless}}
                 {{/each}}
             </ul>
@@ -26,10 +24,12 @@
 
         <div class="col-md-6">
             <h2>Burgers Devoured</h2>
+            <br>
             <ul>
                 {{#each burgers}}
                 {{#if devoured}}
-                <p>{{id}}. {{burger_name}}</p>
+                {{this.id}} - {{this.burger_name}}
+                <hr>
                 {{/if}}
                 {{/each}}
             </ul>
@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <div>
+    <div class="col-md-6 offset-md-3">
         <h2>Add a burger</h2>
         <form class="create-form">
 
@@ -45,8 +45,12 @@
                 <label>New Burger:</label>
                 <input type="text" id="newburger" name="burger">
             </div>
-            <button type="submit">Add Burger</button>
+            <button class="btn-dark" type="submit">Add Burger</button>
         </form>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
 
 </div>

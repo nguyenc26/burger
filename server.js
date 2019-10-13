@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Static directory
-app.use(express.static("public"));
+app.use(express.static('public'));
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
@@ -22,7 +22,6 @@ app.set("view engine", "handlebars");
 var routes = require("./controllers/burger_controller.js");
 
 app.use(routes);
-
 
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
