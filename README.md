@@ -3,7 +3,7 @@
 Eat da burger is an application that allows you to add burgers to a list and then devour them if you wish. The devoured burgers will end up on a separate column than the ones have have not been devoured yet. 
 
 ## Application Heroku Link
-The link to [Eat-Da-Burger](add link)
+The link to [Eat-Da-Burger](https://eat-da-burger-nguyenc.herokuapp.com/)
 
 ## Local Environment Setup
 To use Eat-Da-Burger web application application from your local environment, you must accomplish the following steps below:
